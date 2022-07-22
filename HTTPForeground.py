@@ -27,7 +27,6 @@ port = 80
 print("Hosting on " + str(host) + ", with port " + str(port))
 
 class HttpServer(BaseHTTPRequestHandler):
-
     def do_GET(self):
         self.send_response(200)
         self.send_header("Content-type", "text/html")
