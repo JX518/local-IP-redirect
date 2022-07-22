@@ -1,6 +1,8 @@
-from http.server import HTTPServer, BaseHTTPRequestHandler
-import os
+import socketserver
+from http.server import SimpleHTTPRequestHandler
+import ssl
 import time
+import os
 import sys
 
 sys.stdout = open(os.devnull, "w")
@@ -26,12 +28,11 @@ for i in range(num, len(configSplit)):
         break
     
 host = configSplit[num].split(":")[1].replace(" ", "")
-port = 80
+port = 443
 
 print("Hosting on " + str(host) + ", with port " + str(port))
 
-class HttpServer(BaseHTTPRequestHandler):
-
+class HttpServer(SimpleHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.send_header("Content-type", "text/html")
@@ -40,6 +41,6 @@ class HttpServer(BaseHTTPRequestHandler):
         file = open(folderLocation + "localhost.html", 'r')
         self.wfile.write(bytes(file.read(), "utf-8"))
 
-server = HTTPServer((host,port), HttpServer)
-server.serve_forever()
-server.close()
+httpd = socketserver.TCPServer((host, port), HttpServer)
+httpd.socket = ssl.wrap_socket(httpd.socket, certfile=folderLocation+"localhost.pem", keyfile=folderLocation+"localhost.key",server_side=True)
+httpd.serve_forever()

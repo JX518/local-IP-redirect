@@ -22,6 +22,7 @@ for i in range(num, len(configSplit)):
         break
     
 host = configSplit[num].split(":")[1].replace(" ", "")
+#host = "localhost"
 port = 80
 
 print("Hosting on " + str(host) + ", with port " + str(port))
