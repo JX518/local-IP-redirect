@@ -2,7 +2,7 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 import os
 import time
 
-folderLocation = "C:\\Users\\xujus\\Desktop\\Server\\"
+folderLocation = "C:\\Users\\xujus\\Desktop\\localhost\\"
 
 os.system("cmd /c \"ipconfig > " + folderLocation + "txt.txt\"")
 time.sleep(5)

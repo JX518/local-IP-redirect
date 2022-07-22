@@ -6,7 +6,7 @@ import sys
 sys.stdout = open(os.devnull, "w")
 sys.stderr = open(os.devnull, "w")
 
-folderLocation = "C:\\Users\\xujus\\Desktop\\Server\\"
+folderLocation = "C:\\Users\\xujus\\Desktop\\localhost\\"
 
 os.system("cmd /c \"ipconfig > " + folderLocation + "txt.txt\"")
 time.sleep(5)

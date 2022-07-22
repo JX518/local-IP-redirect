@@ -4,7 +4,7 @@ from ssl import SSLContext as ssl
 import os
 import time
 
-folderLocation = "C:\\Users\\xujus\\Desktop\\Server\\"
+folderLocation = "C:\\Users\\xujus\\Desktop\\localhost\\"
 
 os.system("cmd /c \"ipconfig > " + folderLocation + "txt.txt\"")
 time.sleep(5)
@@ -26,7 +26,7 @@ for i in range(num, len(configSplit)):
 host = configSplit[num].split(":")[1].replace(" ", "")
 port = 443
 
-print("Hosting on " + str(host) + ", with port " + str(port))
+# print("Hosting on " + str(host) + ", with port " + str(port))
 
 class HttpServer(BaseHTTPRequestHandler):
 
