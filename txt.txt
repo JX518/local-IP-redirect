@@ -24,14 +24,9 @@ Wireless LAN adapter Wi-Fi:
 
    Connection-specific DNS Suffix  . : 
    IPv6 Address. . . . . . . . . . . : 2600:8800:1502:cb00:b020:d9dd:56e0:4820
-   Temporary IPv6 Address. . . . . . : 2600:8800:1502:cb00:b9b2:1b9b:8914:1d22
+   Temporary IPv6 Address. . . . . . : 2600:8800:1502:cb00:8d97:9d7f:73c3:9783
    Link-local IPv6 Address . . . . . : fe80::b020:d9dd:56e0:4820%13
    IPv4 Address. . . . . . . . . . . : 192.168.0.17
    Subnet Mask . . . . . . . . . . . : 255.255.255.0
    Default Gateway . . . . . . . . . : fe80::2a80:88ff:fe4b:201a%13
                                        192.168.0.1
-
-Ethernet adapter Bluetooth Network Connection:
-
-   Media State . . . . . . . . . . . : Media disconnected
-   Connection-specific DNS Suffix  . : 
